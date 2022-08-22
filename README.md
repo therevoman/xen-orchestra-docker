@@ -25,6 +25,8 @@ git clone https://github.com/ronivay/xen-orchestra-docker
 
 ```
 docker build -t xen-orchestra .
+# or if build fails with "too many files"
+docker build --ulimit nofile=1048576:1048576 -t xen-orchestra .
 ```
 
 - or pull from dockerhub
